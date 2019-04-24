@@ -87,7 +87,7 @@ static inline void mmc_cmdq_ready_wait(struct mmc_host *host,
 	struct mmc_cmdq_context_info *ctx = &host->cmdq_ctx;
 	struct request_queue *q = mq->queue;
 
-	sched_setscheduler(current, SCHED_BATCH, null);
+	sched_setscheduler(current, SCHED_BATCH, NULL);
 
 	/*
 	 * Wait until all of the following conditions are true:
