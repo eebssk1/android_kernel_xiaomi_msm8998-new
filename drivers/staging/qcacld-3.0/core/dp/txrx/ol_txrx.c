@@ -5192,8 +5192,8 @@ bool ol_txrx_set_ocb_def_tx_param(ol_txrx_vdev_handle vdev,
 		if (vdev->ocb_def_tx_param == NULL)
 			vdev->ocb_def_tx_param =
 				qdf_mem_malloc(sizeof(*vdev->ocb_def_tx_param));
-			qdf_mem_copy(vdev->ocb_def_tx_param, def_tx_param,
-				sizeof(*vdev->ocb_def_tx_param));
+		qdf_mem_copy(vdev->ocb_def_tx_param, def_tx_param,
+			sizeof(*vdev->ocb_def_tx_param));
 		} else {
 		/*
 		 * Default TX parameters are not provided.

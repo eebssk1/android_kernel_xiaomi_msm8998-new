@@ -2766,7 +2766,7 @@ static void __lim_process_sme_deauth_req(tpAniSirGlobal mac_ctx,
 					session_entry->limMlmState !=
 					eLIM_MLM_WT_DEL_STA_RSP_STATE)
 				ret_code = eSIR_SME_DEAUTH_STATUS;
-				goto send_deauth;
+			goto send_deauth;
 			}
 			return;
 		}

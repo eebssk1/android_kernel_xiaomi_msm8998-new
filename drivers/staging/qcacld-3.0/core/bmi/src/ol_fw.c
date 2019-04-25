@@ -1342,7 +1342,7 @@ QDF_STATUS ol_download_firmware(struct ol_context *ol_ctx)
 		param = 19;
 	else
 		param = 6;
-		break;
+	break;
 	default:
 	/* Configure GPIO AR9888 UART */
 		param = 7;
