@@ -23,6 +23,8 @@
 #include <linux/seqlock.h>
 #include <linux/irqflags.h>
 
+#include <bool2int.h>
+
 #include <asm-generic/sections.h>
 #include <linux/io.h>
 
@@ -1609,7 +1611,7 @@ int __init_memblock memblock_overlaps_memory(phys_addr_t base, phys_addr_t size)
 {
 	memblock_cap_size(base, &size);
 
-	return memblock_overlaps_region(&memblock.memory, base, size) >= 0;
+	return bool2int(memblock_overlaps_region(&memblock.memory, base, size)) >= 0;
 }
 
 /**
